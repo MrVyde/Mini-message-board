@@ -1,0 +1,20 @@
+<html>
+    <header>
+        <title>Homepage</title>
+        <link rel="stylesheet" href="/styles.css">
+    </header>
+    <body>
+        <%= title %>
+        <a href="/new">Add a new message </a>
+        <ul>
+            <% messages.forEach((msg, index) => { %>
+                <li>
+                <strong><%= msg.user %></strong>: <%= msg.text %>
+                <em>(<%= msg.added.toDateString() %>)</em>
+                <!-- Open button -->
+                <a href="/newmessage/<%= index %>">Open</a>
+                </li>
+            <% }); %>
+        </ul>
+    </body>
+</html>
