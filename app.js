@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("node:path");
 
+
 const app = express(); // ← create the app FIRST
 
 const messages = [
@@ -56,9 +57,8 @@ app.get("/newmessage/:id", (req, res) => {
 });
 
 // Start server
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
-
 
