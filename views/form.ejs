@@ -7,17 +7,19 @@
   <body>
     <h1>Leave a Message</h1>
 
+    <%- include('partials/errors', { errors: errors }) %>
+
     <form action="/submit" method="POST">
       <!-- Author's Name -->
       <div>
         <label for="author">Your Name:</label>
-        <input type="text" id="author" name="author" required>
+        <input type="text" id="author" name="author" value="<%= author || '' %>" required>
       </div>
 
       <!-- Message Text -->
       <div>
         <label for="message">Your Message:</label>
-        <textarea id="message" name="messageText" rows="4" cols="40" required></textarea>
+        <textarea id="message" name="messageText" rows="4" cols="40" required><%= messageText || '' %></textarea>
       </div>
 
       <!-- Submit Button -->

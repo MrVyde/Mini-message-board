@@ -9,10 +9,9 @@
         <ul>
             <% messages.forEach((msg, index) => { %>
                 <li>
-                <strong><%= msg.user %></strong>: <%= msg.text %>
+                <strong><%= msg.user_name %></strong>: <%= msg.message_text %>
                 <em>(<%= msg.added.toDateString() %>)</em>
-                <!-- Open button -->
-                <a href="/newmessage/<%= index %>">Open</a>
+                <a href="/newmessage/<%= msg.id %>">Open</a>
                 </li>
             <% }); %>
         </ul>
