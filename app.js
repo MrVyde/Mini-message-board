@@ -2,7 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const path = require("node:path");
 
-const PORT = 4000;
 
 const { Pool } = require("pg");
 const pool = new Pool({
@@ -123,6 +122,7 @@ app.get("/newmessage/:id", async (req, res) => {
 });
 
 // Start server
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server running on port  http://localhost:${PORT}`);
 });
