@@ -1,12 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const path = require("node:path");
-
-
-const { Pool } = require("pg");
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-});
+const pool = require("./db/pool");
 
 const app = express(); // ← create the app FIRST
 
