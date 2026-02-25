@@ -122,22 +122,3 @@ Environment variables are used for database configuration.
 .env is ignored in Git (do not commit secrets).
 
 Production deployment is handled by Render.
-
-
-## How to Run
-
-Install dependencies:
-
-npm install express ejs
-
-Start the server:
-
-node app.js
-
-Open in browser:
-
-http://localhost:4000/ → Index page
-
-http://localhost:4000/new → Add new message
-
-http://localhost:4000/message/0 → View first message
